@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blazing fragrance</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Header section start */
+         .logo
+        {
+            
+            padding: 0px;
+            margin: 0px;
+            cursor: pointer;
+            font-weight:30px;
+            
+            
+        }
+        
+        .navbar {
+                 display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color:purple; 
+                padding: 15px 10px;
+                 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+                }
+
+        .logo {
+               color: black;
+               font-size: 50px;
+               font-weight: 40px;
+               letter-spacing:1px;
+               font-family: 'Courier New', Courier, monospace;
+               cursor: pointer;
+              }
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li,h1,ul {
+    margin-left: 30px; 
+    display: inline;
+}
+ul
+{
+    margin-left: 60px;
+}
+li{
+    color: gray;
+    cursor: pointer;
+}
+li:hover{
+    color: white;
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+    transform: scale(1.05); 
+}
+/* Header section end */
+        
+
+
+
+.container {
+    
+    margin: 20px auto;
+    padding: 20px;
+    
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+h1 ,h2{
+    
+    margin-bottom: 15px;
+    color:black;
+    
+}
+h3
+{
+    margin-top: 15px;
+    color: black;
+}
+
+
+
+.about-section, .mission-section, .values-section, .team-section {
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: white;
+}
+/* footer section start */
+.footer {
+         background-color:black;
+        color: white;
+        padding: 20px;
+         }
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+    color: #fff;
+    justify-content: space-between;
+    
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px; 
+    margin: 10px;
+
+}
+
+.footer-section h3 {
+    margin-top: 0;
+    color: #fff;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+}
+
+
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: row;
+    }
+}
+ </style>
+</head>
+<body>
+    <header>
+        
+    
+    <div class="header">
+        <nav class="navbar">
+            <h1>Blazing Fragrance</h1>
+            <ul>
+                <li><a href="index.html"><img src="images/home.png" alt="" height="20px" width="20px"> Home</a></li>
+            <li><a href="Fragrance.html"> <img src="images/perfume icon.png" alt="" height="20px" width="30px">Fragrances</a></li>
+            <li><a href="About.html"><img src="images/about icon.png" alt="" height="20px" width="20px">About Us</a></li>
+            <li><a href="contact.html"> <img src="images/contet icon.png" alt="" height="20px" width="20px">Contact</a></li>
+            <li><a href="review.html"><img src="images/review icon.png" alt="" height="20px" width="20px">Review</a></li>
+            <li><a href="Login.html"><img src="images/login icon.png" alt="" height="20px" width="20px">Login</a></li>
+           </ul>
+        </nav>
+    </header>
+    <br>
+    <br>
+     <center>
+        <h1>About Us</h1>
+    </center>
+    <br>
+    <div class="container">
+        <section class="about-section">
+            <h2>Our Story :</h2>
+            <p>At Blazing fragrance, we believe that fragrance is an extension of one’s identity. Founded in [Year], we have been dedicated to curating exquisite perfumes that evoke emotion and celebrate individuality.</p>
+            <p>Our passion for scents drives us to source the finest ingredients from around the world, ensuring every bottle is a unique experience.</p>
+        </section>
+
+        <section class="mission-section">
+            <h2>Our Mission :</h2>
+            <p>We aim to provide high-quality, luxurious fragrances at accessible prices. Our mission is to inspire our customers to express themselves through scent, making every moment memorable.</p>
+        </section>
+
+        <section class="values-section">
+            <h2>Our Values :</h2>
+            <p> Quality: We prioritize the highest standards in our products.
+                 Sustainability: We are committed to eco-friendly practices and sourcing.
+                 Inclusivity: Our fragrances are designed for everyone, celebrating diversity.</p>
+            
+        </section>
+     </div>
+     <br>
+     <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Discover the finest perfume from arouund the wolrd.our mission is to bring luxury fragrances to your doorstep</p>
+            </div>  
+            
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#"> <img src="images/home.png" alt="" height="20px" width="20px"> Home</a></li>
+                    <li><a href="#"> <img src="images/perfume icon.png" alt=""  height="20px" width="20px">Fragrance</a></li>
+                    <li><a href="#"> <img src="images/about icon.png" alt=""  height="20px" width="20px">AboutUs</a></li>
+                    <li><a href="#"> <img src="images/contet icon.png" alt=""  height="20px" width="20px">Contact</a></li>
+                    <li><a href="#"><img src="images/login icon.png" alt=""  height="20px" width="20px">Login</a></li>
+                    
+                </ul>
+            </div> <br>
+           
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="apps">
+                    <a href="#"><img src="images/facebook.png" alt="image" height="40px" width="40px">Facebook</a>
+                    <a href="#"><img src="images/Instragram.png" alt="image" height="40px" width="40px">Instragram</a>
+                    <a href="#"><img src="images/Twitter1.png" alt="image" height="40px" width="40px">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Your Company. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+    

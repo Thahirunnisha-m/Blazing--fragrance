@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume Shop Login</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+       .logo
+        {
+            
+            padding: 0px;
+            margin: 0px;
+            cursor: pointer;
+            font-weight:30px;
+            
+            
+        }
+        
+        .navbar {
+                 display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color:purple; 
+                padding: 15px 10px;
+                 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+                 border-radius: 5px;
+                }
+
+        .logo {
+               color: black;
+               font-size: 50px;
+               font-weight: 40px;
+               letter-spacing:1px;
+               font-family: 'Courier New', Courier, monospace;
+               cursor: pointer;
+              }
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li,h1,ul {
+    margin-left: 30px; 
+    display: inline;
+}
+ul
+{
+    margin-left: 60px;
+}
+li{
+    color: gray;
+    cursor: pointer;
+}
+li:hover{
+    color: white;
+}
+
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+    transform: scale(1.05); 
+}
+/* navbar section end */
+/* login section start */
+
+.login-container {
+    background-color:#fff;
+    padding: 60px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 500px;
+    height: 350px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color:black; /* Blazing orange */
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border 0.3s;
+}
+
+input:focus {
+    border-color: black; 
+}
+
+button {
+    width: 70%;
+    padding: 10px;
+    background-color:purple; 
+    color: black;
+    border: none;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color:white; 
+    cursor: pointer;
+}
+
+.register-link {
+    margin-top: 15px;
+}
+
+.register-link a {
+    color:black;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+/* login section end */
+.footer {
+         background-color:black;
+        color: white;
+        padding: 20px;
+        border-radius: 5px;
+         }
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px; 
+    margin: 10px;
+}
+
+.footer-section h3 {
+    margin-top: 0;
+    
+}
+
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid white;
+    margin-top: 20px;
+}
+
+
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: row;
+    }
+}
+/* footer section end */
+
+    </style>
+</head>
+<body>
+    <!-- header section start -->
+    <div class="header">
+        <nav class="navbar">
+            <h1>Blazing Fragrance</h1>
+            <ul>
+                <li><a href="index.html"><img src="images/home.png" alt="" height="20px" width="20px"> Home</a></li>
+                <li><a href="Fragrance.html"> <img src="images/perfume icon.png" alt="" height="20px" width="30px">Fragrances</a></li>
+                <li><a href="About.html"><img src="images/about icon.png" alt="" height="20px" width="20px">About Us</a></li>
+                <li><a href="contact.html"> <img src="images/contet icon.png" alt="" height="20px" width="20px">Contact</a></li>
+                <li><a href="review.html"><img src="images/review icon.png" alt="" height="20px" width="20px">Review</a></li>
+                <li><a href="Login.html"><img src="images/login icon.png" alt="" height="20px" width="20px">Login</a></li>
+                
+        
+            </ul>
+        </nav>
+        <!-- header section end -->
+        <br>
+        <br>
+
+    <!-- login page start -->
+     <center>
+    <div class="login-container">
+        <h1>Login</h1>
+        <br>
+        <br>
+        <form class="login-form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+            </div>
+            <br>
+            <br>
+
+            <button type="submit">Login</button>
+        </form>
+        <br>
+        <br>
+        <p class="register-link">Don't have an account? <a href="#">Register here</a></p>
+    </div>
+    </center>
+     <!-- login page end -->
+    <br>
+    <br>
+
+    <!-- footer section section start -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Discover the finest perfume from arouund the wolrd.our mission is to bring luxury fragrances to your doorstep</p>
+            </div>  
+            
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#"> <img src="images/home.png" alt="" height="20px" width="20px"> Home</a></li>
+                    <li><a href="#"> <img src="images/perfume icon.png" alt=""  height="20px" width="20px">Fragrance</a></li>
+                    <li><a href="#"> <img src="images/about icon.png" alt=""  height="20px" width="20px">AboutUs</a></li>
+                    <li><a href="#"> <img src="images/contet icon.png" alt=""  height="20px" width="20px">Contact</a></li>
+                    <li><a href="#"><img src="images/login icon.png" alt=""  height="20px" width="20px">Login</a></li>
+                    
+                </ul>
+            </div> <br>
+           
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="apps">
+                    <a href="#"><img src="images/facebook.png" alt="image" height="40px" width="40px">Facebook</a>
+                    <a href="#"><img src="images/Instragram.png" alt="image" height="40px" width="40px">Instragram</a>
+                    <a href="#"><img src="images/Twitter1.png" alt="image" height="40px" width="40px">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Your Company. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- footer section end -->
+        
+</body>
+</html>

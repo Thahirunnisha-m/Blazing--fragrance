@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Cards Grid</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .logo
+        {
+            
+            padding: 0px;
+            margin: 0px;
+            cursor: pointer;
+            font-weight:30px;
+            
+            
+        }
+        
+        .navbar {
+                 display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color:purple; 
+                padding: 15px 10px;
+                 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+                 border-radius: 5px;
+                }
+
+        .logo {
+               color: black;
+               font-size: 50px;
+               font-weight: 40px;
+               letter-spacing:1px;
+               font-family: 'Courier New', Courier, monospace;
+               cursor: pointer;
+              }
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li,h1,ul {
+    margin-left: 30px; 
+    display: inline;
+}
+ul
+{
+    margin-left: 60px;
+}
+li{
+    color: gray;
+    cursor: pointer;
+}
+li:hover{
+    color: white;
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+    transform: scale(1.05); 
+}
+/* fragarance section start */
+        
+.button-container {
+    display: flex;
+    gap: 20px; 
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    
+    
+}
+
+.fragrance-button {
+    background-color:purple;
+    color: white;
+    box-sizing: 20px;
+    border-radius:20px ;
+    cursor: pointer;
+    }
+
+.fragrance-button:hover {
+    background-color:palevioletred;
+    cursor: pointer; 
+}
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+    cursor: pointer;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.card-description {
+    margin: 10px 0;
+    color: #555;
+}
+
+.card-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color:purple;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.card-button:hover {
+    background-color:palevioletred;
+    cursor: pointer;
+}
+.a 
+{
+    height: 300px;
+    width: 300px;
+}
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    font-family: Arial, sans-serif; 
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold; 
+    margin-bottom: 8px; 
+}
+
+.rating {
+    display: flex;
+    align-items: center; 
+}
+
+.star {
+    color: purple; 
+    font-size: 30px; 
+}
+
+.rating-value {
+    margin-left: 5px; 
+    font-size: 16px; 
+    color: #555; 
+}
+/* fragrance section end */
+
+ /* footer section  start */
+ .footer {
+         background-color:black;
+        color: white;
+        padding: 20px;
+         }
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+    color: #fff;
+    justify-content: space-between;
+    
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 400px; 
+    margin: 10px;
+
+}
+
+.footer-section h3 {
+    margin-top: 0;
+    color: #fff;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+}
+
+
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: row;
+    }
+}
+
+/* footer section end */
+ </style>
+</head>
+<body>
+    <div class="header">
+        <nav class="navbar">
+            <h1>Blazing Fragrance</h1>
+            <ul>
+                <li><a href="index.html"><img src="images/home.png" alt="" height="20px" width="20px"> Home</a></li>
+                <li><a href="Fragrance.html"> <img src="images/perfume icon.png" alt="" height="20px" width="30px">Fragrances</a></li>
+                <li><a href="About.html"><img src="images/about icon.png" alt="" height="20px" width="20px">About Us</a></li>
+                <li><a href="contact.html"> <img src="images/contet icon.png" alt="" height="20px" width="20px">Contact</a></li>
+                <li><a href="review.html"><img src="images/review icon.png" alt="" height="20px" width="20px">Review</a></li>
+                <li><a href="Login.html"><img src="images/login icon.png" alt="" height="20px" width="20px">Login</a></li>
+            </ul>
+        </nav>
+        <br>
+        <br>
+        <center>
+            <button class="medium-button">OUR LATEST PRODUCTS</button>
+            </center>
+            <br>
+            <br>
+
+    
+    <div class="card-container">
+        
+        <div class="card">
+            <img src="images/perfume 1 i.webp" class="a" alt="Image 1" class="card-image" >
+            <div class="card-content">
+                <h2 class="card-title">FRAGRANCE</h2>
+                <p>Fragrance is an expression of individuality and mood.</p>
+                <a href="#" class="card-button">Add to cart</a>
+                <div class="product">
+                    <div class="price">$200.00</div>
+                    <div class="rating">
+                        <span class="star">&#9733;</span> 
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9734;</span> 
+                        <span class="rating-value">(4.0)</span>
+                        </div>
+                </div>
+            </div>
+                
+              
+        </div>
+        <div class="card">
+            <img src="images/perfume 8 image.jpeg" class="a" alt="Image 2" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">Perfume</h2>
+                <p>A well-chosen scent can evoke powerful memories and emotions.</p>
+                <a href="#" class="card-button">Add to cart</a>
+                <br>
+                <div class="product">
+                    <div class="price">$310.00</div>
+                    <div class="rating">
+                        <span class="star">&#9733;</span> 
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9734;</span> 
+                        <br>
+                        <span class="rating-value">(4.0)</span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="b"></div>
+            <img src="images/perfume 22 image.jpeg" class="a" alt="Image 20" class="card-image" >
+            <div class="card-content">
+                <h2 class="card-title">Perfume</h2>
+                <p>The art of perfumery combines science and creativity.</p>
+                <a href="#" class="card-button">Add to cart</a>
+                <br>
+            </div>
+            <div class="product">
+                <div class="price">$350.00</div>
+                <div class="rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span> 
+                   <span class="star">&#9734;</span>
+                    <br>
+                    <span class="rating-value">(4.0)</span>
+                </div>
+            </div>
+            
+        </div>
+        <div class="card">
+            <img src="images/perfume 20 image.jpeg" class="a" alt="Image 20" class="card-image" >
+            <div class="card-content">
+                <h2 class="card-title">Perfume</h2>
+                <p>Each fragrance is a unique blend of top, middle, and base notes.</p>
+                <a href="#" class="card-button">Add to cart</a>
+            </div>
+            <div class="product">
+                <div class="price">$420.00</div>
+                <div class="rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span> 
+                    <span class="rating-value">(4.0)</span>
+                </div>
+            </div>
+            
+        </div>
+        <div class="card">
+            <img src="images/perfume 1 image.jpeg" class="a" alt="Image 20" class="card-image" >
+            <div class="card-content">
+                <h2 class="card-title">Perfume</h2>
+                <p>Floral scents often symbolize romance and femininity.</p>
+                <a href="#" class="card-button">Add to cart</a>
+            </div>
+            <div class="product">
+                <div class="price">$540.00</div>
+                <div class="rating">
+                    <span class="star">&#9733;</span> 
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span> 
+                    <span class="rating-value">(4.0)</span>
+                </div>
+            </div>
+            
+        </div>
+        <div class="card">
+            <img src="images/perfume  21 image.jpeg" class="a" alt="Image 20" class="card-image" >
+            <div class="card-content">
+                <h2 class="card-title">Perfume</h2>
+                <p>Woody fragrances provide a sense of warmth and grounding.</p>
+                <a href="#" class="card-button">Add to cart</a>
+            </div>
+            <div class="product">
+                <div class="price">$360.00</div>
+                <div class="rating">
+                    <span class="star">&#9733;</span> 
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span> 
+                    <span class="rating-value">(4.0)</span>
+                </div>
+            </div>
+            
+        </div>
+        <div class="card">
+            <img src="images/perfume 0 image.jpeg" class="a" alt="Image 20" class="card-image" >
+            <div class="card-content">
+                <h2 class="card-title">Perfume</h2>
+                <p>Woody fragrances provide a sense of warmth and grounding.</p>
+                <a href="#" class="card-button">Add to cart</a>
+            </div>
+            <div class="product">
+                <div class="price">$660.00</div>
+                <div class="rating">
+                    <span class="star">&#9733;</span> 
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span> 
+                    <span class="rating-value">(4.0)</span>
+                </div>
+            </div>
+            
+        </div>
+        <div class="card">
+            <img src="images/perfume 6 image.jpeg" class="a" alt="Image 20" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">Perfume</h2>
+                <p>Citrus notes are refreshing and invigorating, perfect for daytime wear.</p>
+                <a href="#" class="card-button">Add to cart</a>
+            </div>
+            <div class="product">
+                <div class="price">$450.00</div>
+                <div class="rating">
+                    <span class="star">&#9733;</span> 
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span> 
+                    <span class="rating-value">(4.0)</span>
+                </div>
+            </div>
+            
+        </div>
+        <div class="card">
+            <img src="images/perfume 19 image.jpeg" class="a" alt="Image 20" class="card-image" >
+            <div class="card-content">
+                <h2 class="card-title">Perfume</h2>
+                <p>Spicy fragrances can add an element of intrigue and allure.</p>
+                <a href="#" class="card-button">Add to cart</a>
+            </div>
+            <div class="product">
+                <div class="price">$390.00</div>
+                <div class="rating">
+                    <span class="star">&#9733;</span> 
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span>
+                    <span class="rating-value">(4.0)</span>
+                </div>
+            </div>
+            
+        </div>
+        <div class="card">
+            <img src="images/perfume 11 image.jpeg" class="a" alt="Image 20" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">Perfume</h2>
+                <p>Perfume has been used for centuries in rituals and daily life.</p>
+                <a href="#" class="card-button">Add to cart</a>
+            </div>
+            <div class="product">
+                <div class="price">$430.00</div>
+                <div class="rating">
+                    <span class="star">&#9733;</span> 
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span> 
+                    <span class="rating-value">(4.0)</span>
+                </div>
+            </div>
+            
+        </div>
+        <div class="card">
+            <img src="images/perfume 12 image.jpeg" clas="a" alt="Image 20" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">Perfume</h2>
+                <p>Layering scents can create a personalized fragrance signature.</p>
+                <a href="#" class="card-button">Add to cart</a>
+            </div>
+            <div class="product">
+                <div class="price">$500.00</div>
+                <div class="rating">
+                    <span class="star">&#9733;</span> 
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span> 
+                    <span class="rating-value">(4.0)</span>
+                </div>
+            </div>
+            
+        </div>
+        <div class="card">
+            <img src="images/perfume 13 image.jpeg"  class="a"
+            alt="Image 20" class="card-image" height="200px" width="200px">
+            <div class="card-content">
+                <h2 class="card-title">Perfume</h2>
+                <p>Seasonal fragrances can enhance the ambiance of any occasion.</p>
+                <a href="#" class="card-button">Add to cart</a>
+            </div>
+            <div class="product">
+                <div class="price">$189.00</div>
+                <div class="rating">
+                    <span class="star">&#9733;</span> 
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span> 
+                    <span class="rating-value">(4.0)</span>
+                </div>
+            </div>
+            
+        </div>
+        <div class="card">
+            <img src="images/perfume 14 image.jpeg" class="a" alt="Image 20" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">Perfume</h2>
+                <p>A good fragrance can boost confidence and uplift spirits.</p>
+                <a href="#" class="card-button">Add to cart</a>
+            </div>
+            <div class="product">
+                <div class="price">$400.00</div>
+                <div class="rating">
+                    <span class="star">&#9733;</span> 
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span>
+                    <span class="rating-value">(4.0)</span>
+                </div>
+            </div>
+            
+        </div>
+        <div class="card">
+            <img src="images/perfume 15 image.jpeg" class="a" alt="Image 20" class="card-image" >
+            <div class="card-content">
+                <h2 class="card-title">Perfume</h2>
+                <p>The right fragrance can transform your mood and mindset.</p>
+                <a href="#" class="card-button">Add to cart</a>
+            </div>
+            <div class="product">
+                <div class="price">$650.00</div>
+                <div class="rating">
+                    <span class="star">&#9733;</span> 
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span> 
+                    <span class="rating-value">(4.0)</span>
+                </div>
+            </div>
+            
+        </div>
+        <div class="card">
+            <img src="images/perfume5.avif" class="a" alt="Image 20" class="card-image" >
+            <div class="card-content">
+                <h2 class="card-title">Perfume</h2>
+                <p>Perfume application can be an intimate ritual for many.</p>
+                <a href="#" class="card-button">Add to cart</a>
+            </div>
+            <div class="product">
+                <div class="price">$290.00</div>
+                <div class="rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span> 
+                    <span class="rating-value">(4.0)</span>
+                </div>
+            </div>
+            
+        </div>
+        <div class="card">
+            <img src="images/perfume 21 image.jpeg" class="a" alt="Image 20" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">Perfume</h2>
+                <p>Fragrance ingredients can be natural or synthetic, each with its own charm.</p>
+                <a href="#" class="card-button">Add to cart</a>
+            </div>
+            <div class="product">
+                <div class="price">$480.00</div>
+                <div class="rating">
+                    <span class="star">&#9733;</span> 
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span>
+                    <span class="rating-value">(4.0)</span>
+                </div>
+            </div>
+            
+        </div>
+        <div class="card">
+            <img src="images/perfume image.jpeg" class="a" alt="Image 20" class="card-image" >
+            <div class="card-content">
+                <h2 class="card-title">perfume</h2>
+                <p>Scent can be a powerful form of non-verbal communication.</p>
+                <a href="#" class="card-button">Add to cart</a>
+            </div>
+            <div class="product">
+                <div class="price">$380.00</div>
+                <div class="rating">
+                    <span class="star">&#9733;</span> 
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span> 
+                    <span class="rating-value">(4.0)</span>
+                </div>
+            </div>
+            
+        </div>
+        <div class="card">
+            <img src="images/perfume 5 image.jpeg" class="a" alt="Image 20" class="card-image" >
+            <div class="card-content">
+                <h2 class="card-title">Perfume</h2>
+                <p>The fragrance industry continuously evolves with new trends and innovations.</p>
+                <a href="#" class="card-button">Add to cart</a>
+            </div>
+            <div class="product">
+                <div class="price">$370.00</div>
+                <div class="rating">
+                    <span class="star">&#9733;</span> 
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span> 
+                    <span class="rating-value">(4.0)</span>
+                </div>
+            </div>
+            
+        </div>
+        <div class="card">
+            <img src="images/perfume 8 image.jpeg" class="a" alt="Image 20" class="card-image" >
+            <div class="card-content">
+                <h2 class="card-title">Perfume</h2>
+                <p >Finding your signature scent is a journey of exploration and discovery.</p>
+                <a href="#" class="card-button">Add to cart</a>
+            </div>
+            <div class="product">
+                <div class="price">$460.00</div>
+                <div class="rating">
+                    <span class="star">&#9733;</span> 
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span> 
+                    <span class="rating-value">(4.0)</span>
+                </div>
+            </div>
+            
+        </div>
+        <div class="card">
+            <img src="images/perfume 9 image.jpeg" class="a" alt="Image 20" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">Perfume</h2>
+                <p>The fragrance industry continuously evolves with new trends and innovations.</p>
+                <a href="#" class="card-button">Add to cart</a>
+            </div>
+            <div class="product">
+                <div class="price">$520.00</div>
+                <div class="rating">
+                    <span class="star">&#9733;</span> 
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span> 
+                    <span class="rating-value">(4.0)</span>
+                </div>
+            </div>
+            
+        </div>
+       
+    </div>
+    <br>
+    <br>
+    <br>
+    <!-- mens perfume section start -->
+        <center>
+            <button class="medium-button">MEN'S FRAGRANCE</button>
+            </center>
+            <br>
+            <br>
+            <div class="card-container">
+            
+                <div class="card">
+                    <img src="images/men perfume image.jpeg" class="a" alt="Image 1" class="card-image" >
+                    <div class="card-content">
+                        <h2 class="card-title">Perfume</h2>
+                        <p>Fragrance is an expression of individuality and mood.</p>
+                        <h2><div class="price">$200.00</div></h2>
+                        <a href="#" class="card-button">Add to cart</a>
+                    </div>
+                        
+                      
+                </div>
+                <div class="card">
+                    <img src="images/men perfume image 8.jpeg" class="a" alt="Image 2" class="card-image">
+                    <div class="card-content">
+                        <h2 class="card-title">Perfume</h2>
+                        <p>A well-chosen scent can evoke powerful memories and emotions.</p>
+                        <h2> <div class="price">$320.00</div></h2>
+                        <a href="#" class="card-button">Add to cart</a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="b"></div>
+                    <img src="images/men perfume image 1.jpeg" class="a" alt="Image 20" class="card-image" >
+                    <div class="card-content">
+                        <h2 class="card-title">Perfume</h2>
+                        <p>The art of perfumery combines science and creativity.</p>
+                        <h2> <div class="price">$250.00</div></h2>
+                        <a href="#" class="card-button">Add to cart</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/men perfume image 2.jpeg" class="a" alt="Image 20" class="card-image" >
+                    <div class="card-content">
+                        <h2 class="card-title">Perfume</h2>
+                        <p>Each fragrance is a unique blend of top, middle, and base notes.</p>
+                        <h2><div class="price">$300.00</div></h2>
+                        <a href="#" class="card-button">Add to cart</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/men perfume image 3.jpeg" class="a" alt="Image 20" class="card-image" >
+                    <div class="card-content">
+                        <h2 class="card-title">Perfume</h2>
+                        <p>Floral scents often symbolize romance and femininity.</p>
+                        <h2> <div class="price">$320.00</div></h2>
+                        <a href="#" class="card-button">Add to cart</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/men perfume image 4.jpeg" class="a" alt="Image 20" class="card-image" >
+                    <div class="card-content">
+                        <h2 class="card-title">Perfume</h2>
+                        <p>Woody fragrances provide a sense of warmth and grounding.</p>
+                        <h2><div class="price">$450.00</div></h2>
+                        <a href="#" class="card-button">Add to cart</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/men perfume image 5.jpeg" class="a" alt="Image 20" class="card-image" >
+                    <div class="card-content">
+                        <h2 class="card-title">Perfume</h2>
+                        <p>Woody fragrances provide a sense of warmth and grounding.</p>
+                        <h2><div class="price">$280.00</div></h2>
+                        <a href="#" class="card-button">Add to cart</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/men perfume image 6.jpeg" class="a" alt="Image 20" class="card-image">
+                    <div class="card-content">
+                        <h2 class="card-title">Perfume</h2>
+                        <p>Citrus notes are refreshing and invigorating, perfect for daytime wear.</p>
+                        <h2> <div class="price">$470.00</div></h2>
+                        <a href="#" class="card-button">Add to cart</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/men perfume image 7.jpeg" class="a" alt="Image 20" class="card-image" >
+                    <div class="card-content">
+                        <h2 class="card-title">Perfume</h2>
+                        <p>Spicy fragrances can add an element of intrigue and allure.</p>
+                        <h2> <div class="price">$530.00</div></h2>
+                        <a href="#" class="card-button">Add to cart</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/men perfume image 8.jpeg" class="a" alt="Image 20" class="card-image">
+                    <div class="card-content">
+                        <h2 class="card-title">Perfume</h2>
+                        <p>Perfume has been used for centuries in rituals and daily life.</p>
+                        <h2><div class="price">$380.00</div></h2>
+                        <a href="#" class="card-button">Add to cart</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/men perfume image 9.jpeg" clas="a" alt="Image 20" class="card-image">
+                    <div class="card-content">
+                        <h2 class="card-title">Perfume</h2>
+                        <p>Layering scents can create a personalized fragrance signature.</p>
+                        <h2><div class="price">$530.00</div></h2>
+                        <a href="#" class="card-button">Add to cart</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/men perfume 10 image.jpeg"  class="a"
+                    alt="Image 20" class="card-image" height="200px" width="200px">
+                    <div class="card-content">
+                        <h2 class="card-title">Perfume</h2>
+                        <p>Seasonal fragrances can enhance the ambiance of any occasion.</p>
+                        <h2><div class="price">$420.00</div></h2>
+                        <a href="#" class="card-button">Add to cart</a>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+               
+             <!-- mens perfume section end -->
+
+             <!-- womens perfume section start -->
+             <center>
+                <button class="medium-button">WOMEN'S FRAGRACNE</button>
+                </center>
+                <br>
+                <br>
+             <div class="card-container">
+                <div class="card">
+                    <img src="images/home perfume 10.jpeg" class="a" alt="Image 1" class="card-image" >
+                    <div class="card-content">
+                        <h2 class="card-title">Perfume</h2>
+                        <p>Fragrance is an expression of individuality and mood.</p>
+                        <a href="#" class="card-button">Add to cart</a>
+                        <div class="product">
+                            <div class="price">$200.00</div>
+                            <div class="rating">
+                                <span class="star">&#9733;</span> 
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9734;</span> 
+                                <span class="rating-value">(4.0)</span>
+                                </div>
+                        </div>
+                    </div>
+                        
+                      
+                </div>
+                <div class="card">
+                    <img src="images/home perfume 11.jpeg" class="a" alt="Image 2" class="card-image">
+                    <div class="card-content">
+                        <h2 class="card-title">Perfume</h2>
+                        <p>A well-chosen scent can evoke powerful memories and emotions.</p>
+                        <a href="#" class="card-button">Add to cart</a>
+                        <div class="product">
+                            <div class="price">$310.00</div>
+                            <div class="rating">
+                                <span class="star">&#9733;</span> 
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9734;</span> 
+                                <span class="rating-value">(4.0)</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="b"></div>
+                    <img src="images/home perfume 12.jpeg" class="a" alt="Image 20" class="card-image" >
+                    <div class="card-content">
+                        <h2 class="card-title">Perfume</h2>
+                        <p>The art of perfumery combines science and creativity.</p>
+                        <a href="#" class="card-button">Add to cart</a>
+                    </div>
+                    <div class="product">
+                        <div class="price">$350.00</div>
+                        <div class="rating">
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span> 
+                            <span class="star">&#9734;</span>
+                            <span class="rating-value">(4.0)</span>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="card">
+                    <img src="images/home perfume 13.jpeg" class="a" alt="Image 20" class="card-image" >
+                    <div class="card-content">
+                        <h2 class="card-title">Perfume</h2>
+                        <p>Each fragrance is a unique blend of top, middle, and base notes.</p>
+                        <a href="#" class="card-button">Add to cart</a>
+                    </div>
+                    <div class="product">
+                        <div class="price">$420.00</div>
+                        <div class="rating">
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9734;</span> 
+                            <span class="rating-value">(4.0)</span>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="card">
+                    <img src="images/home perfume 14.jpeg" class="a" alt="Image 20" class="card-image" >
+                    <div class="card-content">
+                        <h2 class="card-title">Perfume</h2>
+                        <p>Floral scents often symbolize romance and femininity.</p>
+                        <a href="#" class="card-button">Add to cart</a>
+                    </div>
+                    <div class="product">
+                        <div class="price">$540.00</div>
+                        <div class="rating">
+                            <span class="star">&#9733;</span> 
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9734;</span> 
+                            <span class="rating-value">(4.0)</span>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="card">
+                    <img src="images/home perfume 15 image.jpeg" class="a" alt="Image 20" class="card-image" >
+                    <div class="card-content">
+                        <h2 class="card-title">Perfume</h2>
+                        <p>Woody fragrances provide a sense of warmth and grounding.</p>
+                        <a href="#" class="card-button">Add to cart</a>
+                    </div>
+                    <div class="product">
+                        <div class="price">$360.00</div>
+                        <div class="rating">
+                            <span class="star">&#9733;</span> 
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9734;</span> 
+                            <span class="rating-value">(4.0)</span>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="card">
+                    <img src="images/home perfume 16 image.jpeg" class="a" alt="Image 20" class="card-image" >
+                    <div class="card-content">
+                        <h2 class="card-title">Perfume</h2>
+                        <p>Woody fragrances provide a sense of warmth and grounding.</p>
+                        <a href="#" class="card-button">Add to cart</a>
+                    </div>
+                    <div class="product">
+                        <div class="price">$660.00</div>
+                        <div class="rating">
+                            <span class="star">&#9733;</span> 
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9734;</span> 
+                            <span class="rating-value">(4.0)</span>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="card">
+                    <img src="images/home perfume 17.jpeg" class="a" alt="Image 20" class="card-image">
+                    <div class="card-content">
+                        <h2 class="card-title">Perfume</h2>
+                        <p>Citrus notes are refreshing and invigorating, perfect for daytime wear.</p>
+                        <a href="#" class="card-button">Learn More</a>
+                    </div>
+                    <div class="product">
+                        <div class="price">$450.00</div>
+                        <div class="rating">
+                            <span class="star">&#9733;</span> 
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9734;</span> 
+                            <span class="rating-value">(4.0)</span>
+                        </div>
+                    </div>
+                    
+                </div>
+               
+                    
+                </div>
+                <div class="card">
+                    <img src="images/home perfume 18.jpeg" class="a" alt="Image 20" class="card-image" >
+                    <div class="card-content">
+                        <h2 class="card-title">perfume</h2>
+                        <p>Scent can be a powerful form of non-verbal communication.</p>
+                        <a href="#" class="card-button">Add to cart</a>
+                    </div>
+                    <div class="product">
+                        <div class="price">$380.00</div>
+                        <div class="rating">
+                            <span class="star">&#9733;</span> 
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9734;</span> 
+                            <span class="rating-value">(4.0)</span>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="card">
+                    <img src="images/women perfume image 10.jpeg" class="a" alt="Image 20" class="card-image" >
+                    <div class="card-content">
+                        <h2 class="card-title">Perfume</h2>
+                        <p>The fragrance industry continuously evolves with new trends and innovations.</p>
+                        <a href="#" class="card-button">Add to cart</a>
+                    </div>
+                    <div class="product">
+                        <div class="price">$370.00</div>
+                        <div class="rating">
+                            <span class="star">&#9733;</span> 
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9734;</span> 
+                            <span class="rating-value">(4.0)</span>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="card">
+                    <img src="images/women perfume image 11.jpeg" class="a" alt="Image 20" class="card-image" >
+                    <div class="card-content">
+                        <h2 class="card-title">Perfume</h2>
+                        <p >Finding your signature scent is a journey of exploration and discovery.</p>
+                        <a href="#" class="card-button">Add to cart</a>
+                    </div>
+                    <div class="product">
+                        <div class="price">$460.00</div>
+                        <div class="rating">
+                            <span class="star">&#9733;</span> 
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9734;</span> 
+                            <span class="rating-value">(4.0)</span>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="card">
+                    <img src="images/women perfume image 12.jpeg" class="a" alt="Image 20" class="card-image">
+                    <div class="card-content">
+                        <h2 class="card-title">Perfume</h2>
+                        <p>The fragrance industry continuously evolves with new trends and innovations.</p>
+                        <a href="#" class="card-button">Add to cart</a>
+                    </div>
+                    <div class="product">
+                        <div class="price">$520.00</div>
+                        <div class="rating">
+                            <span class="star">&#9733;</span> 
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9734;</span> 
+                            <span class="rating-value">(4.0)</span>
+                        </div>
+                    </div>
+                    
+                </div>
+               
+            </div>
+
+              <!-- womens perfume section end -->
+               <br>
+               <br>
+               <br>
+
+
+             <footer class="footer">
+                <div class="footer-container">
+                    <div class="footer-section">
+                        <h3>About Us</h3>
+                        
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula.</p>
+                    </div> 
+                    <br><br>
+                    <div class="footer-section">
+                        <h3>Quick Links</h3>
+                        
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Fragrance</a></li>
+                            <li><a href="#">AboutUs</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Login</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Follow Us</h3>
+                        
+                        <div class="apps">
+                            <a href="#"><img src="images/facebook.png" alt="image" height="40px" width="40px">Facebook</a>
+                            <a href="#"><img src="images/Instragram.png" alt="image" height="40px" width="40px">Instragram</a>
+                            <a href="#"><img src="images/Twitter1.png" alt="image" height="40px" width="40px">Twitter</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Your Company. All Rights Reserved.</p>
+                </div>
+            </footer>
+            <!-- footer section end -->
+    
+</body>
+</html>
+
+       
